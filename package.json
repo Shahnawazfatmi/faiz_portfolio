@@ -1,0 +1,25 @@
+{
+  "name": "viral-vlog-rounderz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official portfolio & media kit of Arif Hassan (Viral Vlog Rounderz)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && node scripts/fix-export.mjs",
+    "start": "npx serve@14.2.4 out",
+    "images": "node scripts/build-images.mjs"
+  },
+  "dependencies": {
+    "motion": "^12.23.24",
+    "next": "^16.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.12",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "sharp": "^0.34.4",
+    "typescript": "^5.9.3"
+  }
+}
