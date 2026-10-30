@@ -30,4 +30,6 @@ Before going live, set:
 `assets-src/arif-original.png` is the cropped source. `assets-src/arif-cutout.png` is the same photo with the background removed locally using the open-source `@imgly/background-removal-node` model. `npm run images` builds the optimized WebP files, the avatar, the apple icon and `public/og.jpg`.
 
 ## Deploy
-Upload `/out` to Vercel, Netlify, Cloudflare Pages, GitHub Pages or any web host. On Vercel or Netlify you can also connect the repo with build command `npm run build` and output directory `out`.
+**Cloudflare Workers (current):** connected to this GitHub repo. Build command `npm run build`, deploy command `npx wrangler deploy`. `wrangler.jsonc` uploads `./out` as static assets. Without that file, wrangler tries to set the site up as a server app (OpenNext) and the deploy fails.
+
+You can also upload `/out` to Cloudflare Pages, Netlify, GitHub Pages or any static host.

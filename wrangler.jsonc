@@ -1,0 +1,12 @@
+// Cloudflare Workers static-assets deploy for the Next.js static export (`npm run build` -> ./out).
+// Having this file stops `wrangler deploy` from auto-configuring the project as a server (OpenNext) app.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "faiz-portfolio",
+  "compatibility_date": "2026-10-23",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
